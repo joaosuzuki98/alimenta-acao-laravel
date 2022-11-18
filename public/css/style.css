@@ -1,0 +1,193 @@
+:root {
+    --cor-primaria: #012E40;
+    --cor-secundaria: #024959;
+    --cor-terciaria: #026773;
+    --cor-quartenaria: #3CA6A6;
+    --cor-quintenaria: #F2E3D5;
+}
+
+/* My little bootstrap */
+
+.bg-primaria {
+    background-color: var(--cor-primaria);
+}
+
+.bg-secundaria {
+    background-color: var(--cor-primaria);
+}
+
+.bg-terciaria {
+    background-color: var(--cor-terciaria);
+}
+
+.bg-quartenaria {
+    background-color: var(--cor-quartenaria);
+}
+
+.bg-quintenaria {
+    background-color: var(--cor-quintenaria);
+}
+
+.txt-primaria {
+    color: var(--cor-primaria);
+}
+
+.txt-secundaria {
+    color: var(--cor-secundaria);
+}
+
+.txt-terciaria {
+    color: var(--cor-terciaria);
+}
+
+.txt-quartenaria {
+    color: var(--cor-quartenaria);
+}
+
+.txt-quintenaria {
+    color: var(--cor-quintenaria);
+}
+
+.txt-titulo {
+    font-size: 3.2rem;
+    font-weight: bold;
+}
+
+.cor-borda {
+    border-color: var(--cor-quintenaria);
+}
+
+.pd-direita-esquerda {
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+.bloco-footer {
+    height: 400px;
+}
+
+.margin-top-maior {
+    margin-top: 150px;
+}
+
+.padding-y-maior {
+    padding: 100px 0;
+}
+
+/* Normal css */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    background-color: white;
+}
+
+.grafico-container {
+    height: 70vh;
+}
+
+.swiper-retrato {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    background-color: red;
+}
+
+/* Botão de login/cadastro */
+.custom-btn {
+    width: 200px;
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    font-size: 0.9rem;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+        7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
+    outline: none;
+}
+
+.btn-12 {
+    position: relative;
+    right: 20px;
+    bottom: 20px;
+    border: none;
+    box-shadow: none;
+    width: 200px;
+    height: 40px;
+    line-height: 42px;
+    -webkit-perspective: 230px;
+    perspective: 230px;
+}
+
+.btn-12 span {
+    background: rgb(0, 172, 238);
+    background: linear-gradient(0deg, rgba(0, 172, 238, 1) 0%, rgba(2, 126, 251, 1) 100%);
+    display: block;
+    position: absolute;
+    width: 130px;
+    height: 40px;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+        7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
+    border-radius: 5px;
+    margin: 0;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+
+.btn-12 span:nth-child(1) {
+    box-shadow:
+        -7px -7px 20px 0px #fff9,
+        -4px -4px 5px 0px #fff9,
+        7px 7px 20px 0px #0002,
+        4px 4px 5px 0px #0001;
+    -webkit-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+    -webkit-transform-origin: 50% 50% -20px;
+    -moz-transform-origin: 50% 50% -20px;
+    transform-origin: 50% 50% -20px;
+}
+
+.btn-12 span:nth-child(2) {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+    -webkit-transform-origin: 50% 50% -20px;
+    -moz-transform-origin: 50% 50% -20px;
+    transform-origin: 50% 50% -20px;
+}
+
+.btn-12:hover span:nth-child(1) {
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+        7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+}
+
+.btn-12:hover span:nth-child(2) {
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+        7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
+    color: transparent;
+    -webkit-transform: rotateX(-90deg);
+    -moz-transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
+}
