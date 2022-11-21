@@ -44,16 +44,16 @@
         <div class="collapse navbar-collapse" id="collapsibleNavId">
           <ul class="navbar-nav ms-auto mt-2 mt-lg-0 fs-5">
             <li class="nav-item">
-              <a class="nav-link text-light" href="#">Por que doar?</a>
+              <a class="nav-link text-light" href="#por-que-doar">Por que doar?</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light" href="#">Doe</a>
+              <a class="nav-link text-light" href="#doe">Doe</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light" href="#">Receba</a>
+              <a class="nav-link text-light" href="#receba">Receba</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light" href="#">Sobre</a>
+              <a class="nav-link text-light" href="#sobre">Sobre</a>
             </li>
             <div class="d-flex my-2 my-lg-0">
               <button type="button" class="btn btn-primary my-2 my-sm-0 p-3 d-block d-sm-none sombra"> <span
@@ -94,24 +94,6 @@
       </button>
     </section>
 
-    <section class="margin-top-maior">
-      <div class="swiper py-5 col-6 offset-3">
-        <div class="swiper-wrapper d-flex justify-content-center">
-          {{-- <div class="swiper-slide d-flex align-items-center flex-column">
-            <div class="swiper-retrato mb-5"></div>
-            <p class="text-center col-5">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui numquam ipsum minima, eveniet repellat accusantium dolorum quidem doloribus dicta sint ab harum, consectetur placeat voluptate voluptas optio alias reprehenderit incidunt?</p>
-          </div> --}}
-          <div class="swiper-slide">Slide 2</div>
-          <div class="swiper-slide">Slide 2</div>
-          <div class="swiper-slide">Slide 3</div>
-        </div>
-        <div class="swiper-pagination"></div>
-      
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-      </div>    
-    </section>
-
     <section id="doe"
       class="bg-quartenaria padding-y-maior d-flex justify-content-evenly align-items-center margin-top-maior">
       <div class="col-4">
@@ -129,7 +111,7 @@
     </section>
 
     <section id="receba" class="bg-terciaria padding-y-maior d-flex justify-content-evenly align-items-center">
-      <div style="height: 500px; width: 700px; background-color: white;"></div>
+      <div style="height: 600px; width: 800px; background-color: white;"></div>
 
       <div class="col-4">
         <h2 class="fs-1 fw-bold text-light text-center mb-3">
@@ -142,15 +124,51 @@
       </div>
     </section>
 
-    <section id="sobre" class="my-5 padding-y-maior col-6 offset-3">
-      <h2 class="fw-bold fs-1 text-center mb-5">Sobre o projeto</h2>
-      <p class="fw-light fs-3 text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia beatae,
-        sed vel odit sunt itaque porro facilis voluptates hic ratione odio distinctio rem quidem quasi fugiat sint
-        natus! Dolore, tempore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Est debitis rem itaque soluta
-        velit illum nesciunt nobis quam odit sapiente rerum aspernatur, impedit labore facilis omnis voluptates iusto
-        unde delectus. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus perferendis porro at ducimus
-        obcaecati, doloremque esse magnam velit culpa qui necessitatibus distinctio error temporibus quibusdam, et
-        dolore asperiores! Ea, necessitatibus?</p>
+    <section class="margin-top-maior">
+      <h2 class="fw-bold fs-1 text-center mb-5">Quem recebe nunca esquece</h2>
+
+      <div class="swiper col-6 offset-3 py-5">
+        <div class="swiper-wrapper col-6">
+          <div class="swiper-slide d-flex flex-column align-items-center">
+            <figure class="swiper-retrato"></figure>
+            <p class="text-center col-5 mt-4 fst-italic fs-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, deserunt placeat libero fuga voluptas nesciunt unde commodi quia dolorum error accusamus impedit quae delectus iure vitae cumque, nostrum et esse?</p>
+          </div>
+          <div class="swiper-slide d-flex flex-column align-items-center">
+            <figure class="swiper-retrato"></figure>
+            <p class="text-center col-5 mt-4 fst-italic fs-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, deserunt placeat libero fuga voluptas nesciunt unde commodi quia dolorum error accusamus impedit quae delectus iure vitae cumque, nostrum et esse?</p>
+          </div>
+          <div class="swiper-slide d-flex flex-column align-items-center">
+            <figure class="swiper-retrato"></figure>
+            <p class="text-center col-5 mt-4 fst-italic fs-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, deserunt placeat libero fuga voluptas nesciunt unde commodi quia dolorum error accusamus impedit quae delectus iure vitae cumque, nostrum et esse?</p>
+          </div>
+          <div class="swiper-slide d-flex flex-column align-items-center">
+            <figure class="swiper-retrato"></figure>
+            <p class="text-center col-5 mt-4 fst-italic fs-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, deserunt placeat libero fuga voluptas nesciunt unde commodi quia dolorum error accusamus impedit quae delectus iure vitae cumque, nostrum et esse?</p>
+          </div>
+          <div class="swiper-slide d-flex flex-column align-items-center">
+            <figure class="swiper-retrato"></figure>
+            <p class="text-center col-5 mt-4 fst-italic fs-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, deserunt placeat libero fuga voluptas nesciunt unde commodi quia dolorum error accusamus impedit quae delectus iure vitae cumque, nostrum et esse?</p>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      
+      </div>    
+    </section>
+
+    <section id="sobre" class="my-5 padding-y-maior bg-quintenaria py-5">
+      <div class="col-6 offset-3 my-5">
+        <h2 class="fw-bold fs-1 text-center mb-5">Sobre o projeto</h2>
+        <p class="fw-light fs-3 text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia beatae,
+          sed vel odit sunt itaque porro facilis voluptates hic ratione odio distinctio rem quidem quasi fugiat sint
+          natus! Dolore, tempore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Est debitis rem itaque soluta
+          velit illum nesciunt nobis quam odit sapiente rerum aspernatur, impedit labore facilis omnis voluptates iusto
+          unde delectus. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus perferendis porro at ducimus
+          obcaecati, doloremque esse magnam velit culpa qui necessitatibus distinctio error temporibus quibusdam, et
+          dolore asperiores! Ea, necessitatibus?</p>
+      </div>
     </section>
   </main>
 
