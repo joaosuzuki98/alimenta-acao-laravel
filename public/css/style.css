@@ -96,6 +96,46 @@ body {
     background-color: red;
 }
 
+.modal-cad-login {
+    display: none;
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.tela-cad-login {
+    position: absolute;
+    height: 85vh;
+    width: 85vw;
+    margin-top: 7.5vh;
+    margin-left: 7.5vw;
+    background-image: linear-gradient(var(--cor-quartenaria), var(--cor-terciaria));
+}
+
+.doador {
+    height: 90%;
+    width: 35%;
+    background-color: white;
+}
+
+.donatario {
+    height: 90%;
+    width: 35%;
+    background-color: white;
+}
+
+.x-mark  {
+    left: 45%;
+    top: 5%;
+}
+
+#fechar-modal {
+    cursor: pointer;
+}
+
 /* Botão de login/cadastro */
 .custom-btn {
     width: 200px;

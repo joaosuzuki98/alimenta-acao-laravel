@@ -1,4 +1,4 @@
-// Gráfico chart js
+//////////////////////////// Gráfico chart js ///////////////////////////////
 const graficoFome = document.getElementById('grafico-fome')
 
 new Chart(
@@ -52,7 +52,7 @@ function responsiveFonts() {
     }
 }
 
-// Slider swiper.js
+////////////////////// Slider swiper.js ///////////////////////////////////////
 const swiper = new Swiper('.swiper', {
     direction: 'horizontal',
     loop: true,
@@ -67,8 +67,22 @@ const swiper = new Swiper('.swiper', {
     },
 });
 
+/////////////////////////// DEFINIÇÕES /////////////////////////////////////
+const ativaModal = document.getElementsByClassName('ativa-modal')
+const modalCadLogin = document.getElementById('modal')
+const fecharModal = document.getElementById('fechar-modal')
+
 ////////////////////////// FUNÇÕES //////////////////////////////////////
 
 
 
 //////////////////////////// EVENTOS ///////////////////////////////////
+for(buttons of ativaModal) {
+    buttons.addEventListener('click', () => {
+        modalCadLogin.style.display = 'block'
+    })
+}
+
+fecharModal.addEventListener('click', () => {
+    modalCadLogin.style.display = 'none'
+})

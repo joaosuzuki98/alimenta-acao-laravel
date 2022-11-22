@@ -36,7 +36,7 @@
     <nav class="navbar navbar-expand-sm bg-primaria py-4">
       <div class="container">
         <div class="logo"></div>
-        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+        <button class="navbar-toggler d-lg-none ativa-modal" type="button" data-bs-toggle="collapse"
           data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
           aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -56,11 +56,11 @@
               <a class="nav-link text-light" href="#sobre">Sobre</a>
             </li>
             <div class="d-flex my-2 my-lg-0">
-              <button type="button" class="btn btn-primary my-2 my-sm-0 p-3 d-block d-sm-none sombra"> <span
+              <button type="button" class="btn btn-primary my-2 my-sm-0 p-3 d-block d-sm-none"> <span
                   class="text-center me-2"><i class="fa-solid fa-user"></i></span>
                 Área do usuário</button>
               <a href="#escolha-usuario">
-                <button class="custom-btn btn-12 d-none d-sm-block"><span class="fw-bold">Entrar/cadastrar</span><span
+                <button class="custom-btn btn-12 d-none d-sm-block ativa-modal"><span class="fw-bold">Entrar/cadastrar</span><span
                     class="fw-bold">Área do
                     usuário</span></button>
               </a>
@@ -89,7 +89,7 @@
         <canvas id="grafico-fome"></canvas>
       </div>
 
-      <button class="col-2 offset-5 bg-primaria text-light fs-4 text-center mt-2 mb-5 py-3">
+      <button class="col-2 offset-5 bg-primaria text-light fs-4 text-center mt-2 mb-5 py-3 ativa-modal">
         Começar
       </button>
     </section>
@@ -121,6 +121,27 @@
           É uma pessoa em necessidade ou uma instituição de caridade? Veja anúncios de doação e se candidate a receber
           alimentos, entre em contato com o doador e explique a sua situação e mais!
         </p>
+      </div>
+    </section>
+
+    <section class="margin-top-maior py-5">
+      <h2 class="fs-1 fw-bold text-center mb-5">Venha fazer parte!</h2>
+      <p class="text-center col-4 offset-4 fw-light fs-2 mb-5">Junte-se a milhares de usuários</p>
+      <button class="col-2 offset-5 bg-primaria text-light fs-4 text-center mt-2 mb-5 py-3 ativa-modal">
+        Começar
+      </button>
+    </section>
+
+    <section id="sobre" class="margin-top-maior padding-y-maior bg-quintenaria py-5">
+      <div class="col-6 offset-3 my-5">
+        <h2 class="fw-bold fs-1 text-center mb-5">Sobre o projeto</h2>
+        <p class="fw-light fs-3 text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia beatae,
+          sed vel odit sunt itaque porro facilis voluptates hic ratione odio distinctio rem quidem quasi fugiat sint
+          natus! Dolore, tempore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Est debitis rem itaque soluta
+          velit illum nesciunt nobis quam odit sapiente rerum aspernatur, impedit labore facilis omnis voluptates iusto
+          unde delectus. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus perferendis porro at ducimus
+          obcaecati, doloremque esse magnam velit culpa qui necessitatibus distinctio error temporibus quibusdam, et
+          dolore asperiores! Ea, necessitatibus?</p>
       </div>
     </section>
 
@@ -158,18 +179,16 @@
       </div>    
     </section>
 
-    <section id="sobre" class="my-5 padding-y-maior bg-quintenaria py-5">
-      <div class="col-6 offset-3 my-5">
-        <h2 class="fw-bold fs-1 text-center mb-5">Sobre o projeto</h2>
-        <p class="fw-light fs-3 text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia beatae,
-          sed vel odit sunt itaque porro facilis voluptates hic ratione odio distinctio rem quidem quasi fugiat sint
-          natus! Dolore, tempore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Est debitis rem itaque soluta
-          velit illum nesciunt nobis quam odit sapiente rerum aspernatur, impedit labore facilis omnis voluptates iusto
-          unde delectus. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus perferendis porro at ducimus
-          obcaecati, doloremque esse magnam velit culpa qui necessitatibus distinctio error temporibus quibusdam, et
-          dolore asperiores! Ea, necessitatibus?</p>
+    <div class="position-fixed modal-cad-login" id="modal">
+      <div class="tela-cad-login d-flex flex-column align-items-center justify-content-evenly">
+        <i class="fa-solid fa-square-xmark position-relative x-mark fa-2xl txt-quintenaria" id="fechar-modal"></i>
+        <h2 class="txt-quintenaria fw-bold fs-1 mb-5 mt-4">Escolha o tipo de usuário</h2>
+        <div class="d-flex justify-content-evenly h-100 w-100">
+          <div class="doador"></div>
+          <div class="donatario"></div>
+        </div>
       </div>
-    </section>
+    </div>
   </main>
 
   <footer class="mt-5 bg-primaria py-5 d-flex justify-content-evenly align-items-center">
