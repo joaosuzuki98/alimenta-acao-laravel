@@ -35,7 +35,9 @@
   <header>
     <nav class="navbar navbar-expand-sm bg-primaria py-4">
       <div class="container">
-        <div class="logo"></div>
+        <div class="logo">
+          <img src="/img/alimenta-acao-logo.svg" alt="Duas sacolas com comida representando o logo do site">
+        </div>
         <button class="navbar-toggler d-lg-none ativa-modal" type="button" data-bs-toggle="collapse"
           data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
           aria-label="Toggle navigation">
@@ -72,8 +74,8 @@
 
   </header>
   <main>
-    <figure class="col-10 offset-1 my-5" style="background-color: red; height: 500px;">
-
+    <figure class="col-10 offset-1 my-5 overflow-hidden" style="background-color: red; height: 580px;">
+      <img src="/img/pexels-rodnae-productions-6646967.jpg" alt="Voluntários entregando comida para pessoas necessitadas" id="img-main">
     </figure>
 
     <section id="por-que-doar" class="margin-top-maior">
@@ -89,7 +91,7 @@
         <canvas id="grafico-fome"></canvas>
       </div>
 
-      <button class="col-2 offset-5 bg-primaria text-light fs-4 text-center mt-2 mb-5 py-3 ativa-modal">
+      <button class="col-2 offset-5 bg-primaria text-light fs-4 text-center mt-2 mb-5 py-3 ativa-modal efeito-hover-button">
         Começar
       </button>
     </section>
@@ -124,14 +126,6 @@
       </div>
     </section>
 
-    <section class="margin-top-maior py-5">
-      <h2 class="fs-1 fw-bold text-center mb-5">Venha fazer parte!</h2>
-      <p class="text-center col-4 offset-4 fw-light fs-2 mb-5">Junte-se a milhares de usuários</p>
-      <button class="col-2 offset-5 bg-primaria text-light fs-4 text-center mt-2 mb-5 py-3 ativa-modal">
-        Começar
-      </button>
-    </section>
-
     <section id="sobre" class="margin-top-maior padding-y-maior bg-quintenaria py-5">
       <div class="col-6 offset-3 my-5">
         <h2 class="fw-bold fs-1 text-center mb-5">Sobre o projeto</h2>
@@ -151,23 +145,33 @@
       <div class="swiper col-6 offset-3 py-5">
         <div class="swiper-wrapper col-6">
           <div class="swiper-slide d-flex flex-column align-items-center">
-            <figure class="swiper-retrato"></figure>
+            <figure class="swiper-retrato">
+              <img src="/img/foto1.png" alt="Foto de uma pessoa" class="w-100 borda-redonda">
+            </figure>
             <p class="text-center col-5 mt-4 fst-italic fs-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, deserunt placeat libero fuga voluptas nesciunt unde commodi quia dolorum error accusamus impedit quae delectus iure vitae cumque, nostrum et esse?</p>
           </div>
           <div class="swiper-slide d-flex flex-column align-items-center">
-            <figure class="swiper-retrato"></figure>
+            <figure class="swiper-retrato">
+              <img src="/img/foto2.png" alt="Foto de uma pessoa" class="w-100 borda-redonda">
+            </figure>
             <p class="text-center col-5 mt-4 fst-italic fs-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, deserunt placeat libero fuga voluptas nesciunt unde commodi quia dolorum error accusamus impedit quae delectus iure vitae cumque, nostrum et esse?</p>
           </div>
           <div class="swiper-slide d-flex flex-column align-items-center">
-            <figure class="swiper-retrato"></figure>
+            <figure class="swiper-retrato">
+              <img src="/img/foto3.png" alt="Foto de uma pessoa" class="w-100 borda-redonda">
+            </figure>
             <p class="text-center col-5 mt-4 fst-italic fs-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, deserunt placeat libero fuga voluptas nesciunt unde commodi quia dolorum error accusamus impedit quae delectus iure vitae cumque, nostrum et esse?</p>
           </div>
           <div class="swiper-slide d-flex flex-column align-items-center">
-            <figure class="swiper-retrato"></figure>
+            <figure class="swiper-retrato">
+              <img src="/img/foto4.png" alt="Foto de uma pessoa" class="w-100 borda-redonda">
+            </figure>
             <p class="text-center col-5 mt-4 fst-italic fs-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, deserunt placeat libero fuga voluptas nesciunt unde commodi quia dolorum error accusamus impedit quae delectus iure vitae cumque, nostrum et esse?</p>
           </div>
           <div class="swiper-slide d-flex flex-column align-items-center">
-            <figure class="swiper-retrato"></figure>
+            <figure class="swiper-retrato">
+              <img src="/img/foto5.png" alt="Foto de uma pessoa" class="w-100 borda-redonda">
+            </figure>
             <p class="text-center col-5 mt-4 fst-italic fs-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, deserunt placeat libero fuga voluptas nesciunt unde commodi quia dolorum error accusamus impedit quae delectus iure vitae cumque, nostrum et esse?</p>
           </div>
         </div>
@@ -182,7 +186,7 @@
     <div class="position-fixed modal-cad-login" id="modal">
       <div class="tela-cad-login d-flex flex-column align-items-center justify-content-evenly">
         <i class="fa-solid fa-square-xmark position-relative x-mark fa-2xl txt-quintenaria" id="fechar-modal"></i>
-        <h2 class="txt-quintenaria fw-bold fs-1 mb-5 mt-4">Escolha o tipo de usuário</h2>
+        <h2 class="text-light fw-bold fs-1 mb-5 mt-4">Escolha o tipo de usuário</h2>
         <div class="d-flex justify-content-evenly h-100 w-100">
           <div class="doador"></div>
           <div class="donatario"></div>
@@ -191,25 +195,69 @@
     </div>
   </main>
 
+  <div class="seta-cima" id="volta-cima">
+    <span class="text-light fs-1 text-center">
+      <i class="fa-solid fa-chevron-up"></i>
+    </span>
+  </div>
+
   <footer class="mt-5 bg-primaria py-5 d-flex justify-content-evenly align-items-center">
 
-    <div style="background-color: white; height: 200px; width: 200px;"></div>
+    <div style="height: 200px; width: 200px;">
+      <img src="/img/alimenta-acao-logo.svg" alt="Duas sacolas com comida representando o logo do site">
+    </div>
 
     <div class="border border-1 border-top-0 border-bottom-0 cor-borda text-light pd-direita-esquerda bloco-footer">
       <h3 class="fw-light text-center fs-2 mb-5">Links rápidos</h3>
-      <p class="text-center fs-5">Por que doar?</p>
-      <p class="text-center fs-5">Doe</p>
-      <p class="text-center fs-5">Receba</p>
-      <p class="text-center fs-5">Sobre</p>
-      <p class="text-center fs-5"> Começar</p>
+      <p class="text-center fs-5">
+        <a href="#por-que-doar" class="nav-link">
+          Por que doar?
+        </a> 
+      </p>
+      <p class="text-center fs-5">
+        <a href="#doe" class="nav-link">
+          Doe
+        </a> 
+      </p>
+      <p class="text-center fs-5">
+        <a href="#receba" class="nav-link">
+          Receba
+        </a> 
+      </p>
+      <p class="text-center fs-5">
+        <a href="#sobre" class="nav-link">
+          Sobre
+        </a> 
+      </p>
+      <p class="text-center fs-5">
+        <a href="#" class="nav-link ativa-modal">
+          Começar
+        </a> 
+      </p>
     </div>
 
     <div class="text-light bloco-footer">
       <h3 class="fw-light text-center fs-2 mb-5">Outros links</h3>
-      <p class="text-center fs-5">Política de privacidade</p>
-      <p class="text-center fs-5">Dúvidas frequentes</p>
-      <p class="text-center fs-5">Termos</p>
-      <p class="text-center fs-5"> Dê uma sugestão</p>
+      <p class="text-center fs-5">
+        <a href="#" class="nav-link ativa-modal">
+          Política de privacidade
+        </a> 
+      </p>
+      <p class="text-center fs-5">
+        <a href="#" class="nav-link ativa-modal">
+          Dúvidas frequentes
+        </a> 
+      </p>
+      <p class="text-center fs-5">
+        <a href="#" class="nav-link ativa-modal">
+          Termos de uso
+        </a> 
+      </p>
+      <p class="text-center fs-5">
+        <a href="#" class="nav-link ativa-modal">
+          Dê uma sugestão
+        </a> 
+      </p>
     </div>
 
     <div

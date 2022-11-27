@@ -74,15 +74,34 @@
     padding: 100px 0;
 }
 
+.borda-redonda  {
+    border-radius: 50%;
+}
+
 /* Normal css */
 body {
     font-family: 'Poppins', sans-serif;
 }
 
+a {
+    transition: color 400ms !important;
+}
+
+a:hover {
+    color: var(--cor-quartenaria) !important;
+}
+
+.efeito-hover-button {
+    transition: background-color 400ms;
+}
+
+.efeito-hover-button:hover {
+    background-color: var(--cor-terciaria);
+}
+
 .logo {
     width: 80px;
     height: 80px;
-    background-color: white;
 }
 
 .grafico-container {
@@ -132,8 +151,39 @@ body {
     top: 5%;
 }
 
+.seta-cima {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 65px;
+    height: 65px;
+    background-color: rgba(0, 0, 0, .2);
+    border-radius: 25%;
+    right: 2%;
+    bottom: 15px;
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+    transition: .5s;
+}
+
+.seta-cima.ativo {
+    visibility: visible;
+    opacity: 1;
+}
+
+.chevron-voltar {
+    font-size: 2.8rem;
+}
+
 #fechar-modal {
     cursor: pointer;
+}
+
+#img-main {
+    margin-top: -300px;
+    margin-left: -300px;
 }
 
 /* Botão de login/cadastro */

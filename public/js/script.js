@@ -72,9 +72,17 @@ const ativaModal = document.getElementsByClassName('ativa-modal')
 const modalCadLogin = document.getElementById('modal')
 const fecharModal = document.getElementById('fechar-modal')
 
+const voltaCima = document.getElementById('volta-cima')
+
 ////////////////////////// FUNÇÕES //////////////////////////////////////
+const deVoltaParaCima = () => {
+    document.body.scrollTop = 0
+    document.documentElement.scrollTop = 0
+}
 
-
+const apareceScroll = () => {
+    voltaCima.classList.toggle("ativo", window.scrollY > 500)
+}
 
 //////////////////////////// EVENTOS ///////////////////////////////////
 for(buttons of ativaModal) {
@@ -86,3 +94,7 @@ for(buttons of ativaModal) {
 fecharModal.addEventListener('click', () => {
     modalCadLogin.style.display = 'none'
 })
+
+voltaCima.addEventListener('click', deVoltaParaCima)
+
+window.addEventListener('scroll', apareceScroll)
