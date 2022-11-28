@@ -104,6 +104,10 @@ a:hover {
     height: 80px;
 }
 
+.altura-banner {
+    height: 580px;
+}
+
 .grafico-container {
     height: 70vh;
 }
@@ -112,7 +116,6 @@ a:hover {
     height: 200px;
     width: 200px;
     border-radius: 50%;
-    background-color: red;
 }
 
 .modal-cad-login {

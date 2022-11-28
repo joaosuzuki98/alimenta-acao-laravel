@@ -74,7 +74,7 @@
 
   </header>
   <main>
-    <figure class="col-10 offset-1 my-5 overflow-hidden" style="background-color: red; height: 580px;">
+    <figure class="col-10 offset-1 my-5 overflow-hidden altura-banner">
       <img src="/img/pexels-rodnae-productions-6646967.jpg" alt="Voluntários entregando comida para pessoas necessitadas" id="img-main">
     </figure>
 
@@ -124,6 +124,16 @@
           alimentos, entre em contato com o doador e explique a sua situação e mais!
         </p>
       </div>
+    </section>
+
+    <section>
+      <h2 class="col-10 offset-1 text-center fw-bold fs-1 margin-top-maior">Venha fazer parte desta comunidade!</h2>
+      <p class="text-center fs-4 fw-light">
+        Junte-se a milhares de usuários e faça o bem ou o receba
+      </p>
+      <button class="col-2 offset-5 bg-primaria text-light fs-4 text-center mt-4 py-3 ativa-modal efeito-hover-button">
+        Começar
+      </button>
     </section>
 
     <section id="sobre" class="margin-top-maior padding-y-maior bg-quintenaria py-5">
@@ -263,9 +273,21 @@
     <div
       class="text-light border border-1 border-top-0 border-bottom-0 border-end-0 cor-borda pd-direita-esquerda bloco-footer">
       <h3 class="fw-light text-center fs-2 mb-5">Contatos</h3>
-      <p class="text-center fs-5">Email</p>
-      <p class="text-center fs-5">Whatsapp</p>
-      <p class="text-center fs-5">Linkedin</p>
+      <p class="text-center fs-5">
+        <a href="mailto: joaosuzuki98@outlook.com" class="nav-link">
+          Email
+        </a> 
+      </p>
+      <p class="text-center fs-5">
+        <a href="https://wa.me/5512992557050" target="_blank" class="nav-link">
+          Whatsapp
+        </a> 
+      </p>
+      <p class="text-center fs-5">
+        <a href="#" class="nav-link ativa-modal">
+          Linkedin
+        </a> 
+      </p>
     </div>
   </footer>
 
