@@ -16,3 +16,23 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('index');
 });
+
+Route::get('/cadastro-doador', function () {
+    return view('cadastro-doador');
+})->name('cadastro-doador');
+
+Route::get('/cadastro-donatario', function () {
+    return view('cadastro-donatario');
+})->name('cadastro-donatario');
+
+Route::get('/doador-anuncios', function() {
+    return view('doador-anuncios');
+})->name('doador-anuncios');
+
+Route::get('/donatario-anuncios', function() {
+    return view('donatario-anuncios');
+})->name('donatario-anuncios');
+
+Route::get('/perfil', function() {
+    return view('perfil');
+})->name('perfil');
