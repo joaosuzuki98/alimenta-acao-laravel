@@ -1,7 +1,101 @@
+:root {
+    --cor-primaria: #012E40;
+    --cor-secundaria: #024959;
+    --cor-terciaria: #026773;
+    --cor-quartenaria: #3CA6A6;
+    --cor-quintenaria: #F2E3D5;
+}
+
+/* My little bootstrap */
+
+.bg-primaria {
+    background-color: var(--cor-primaria);
+}
+
+.bg-secundaria {
+    background-color: var(--cor-secundaria);
+}
+
+.bg-terciaria {
+    background-color: var(--cor-terciaria);
+}
+
+.bg-quartenaria {
+    background-color: var(--cor-quartenaria);
+}
+
+.bg-quintenaria {
+    background-color: var(--cor-quintenaria);
+}
+
+.txt-primaria {
+    color: var(--cor-primaria);
+}
+
+.txt-secundaria {
+    color: var(--cor-secundaria);
+}
+
+.txt-terciaria {
+    color: var(--cor-terciaria);
+}
+
+.txt-quartenaria {
+    color: var(--cor-quartenaria);
+}
+
+.txt-quintenaria {
+    color: var(--cor-quintenaria);
+}
+
+.txt-titulo {
+    font-size: 3.2rem;
+    font-weight: bold;
+}
+
+.cor-borda {
+    border-color: var(--cor-quintenaria);
+}
+
+.pd-direita-esquerda {
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+.bloco-footer {
+    height: 400px;
+}
+
+.margin-top-maior {
+    margin-top: 100px;
+}
+
+.padding-y-maior {
+    padding: 100px 0;
+}
+
+.borda-redonda  {
+    border-radius: 50%;
+}
+
+/* Normal css */
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
 input, label{
     display: block;
 }
 
-.padding-direita {
-    padding-right: 4vw;
+.padding-esquerda {
+    padding-right: 4.5vw;
+}
+
+.efeito-hover-button {
+    transition: background-color 400ms;
+}
+
+.efeito-hover-button:hover {
+    background-color: var(--cor-terciaria);
 }

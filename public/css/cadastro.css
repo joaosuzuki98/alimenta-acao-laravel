@@ -13,7 +13,7 @@
 }
 
 .bg-secundaria {
-    background-color: var(--cor-primaria);
+    background-color: var(--cor-secundaria);
 }
 
 .bg-terciaria {
@@ -79,6 +79,9 @@
 }
 
 /* Normal css */
+body {
+    font-family: 'Poppins', sans-serif;
+}
 
 .bg-degrade {
     background-image: linear-gradient(var(--cor-quartenaria), var(--cor-terciaria));
