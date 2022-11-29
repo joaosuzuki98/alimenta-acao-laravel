@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
   <title>Cadastro</title>
@@ -11,53 +11,44 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="/css/cadastro-doador.css">
+    <link rel="stylesheet" href="/css/cadastro.css">
 
 </head>
 
-<body>
+<body class="bg-quintenaria">
 
-    <h1 class="text-center mb-5 fw-bold">Doador</h1>
+    <h1 class="text-center mb-5 fw-bold txt-primaria fonte-titulo mt-3">Doador</h1>
 
     <div class="d-flex flex-row justify-content-evenly">
-      <div style="background-color: green; height: 720px" class="d-flex flex-column align-items-center col-5 rounded-4">
-        <div style="background-color: red; height: 120px; width: 120px;" class="mt-5">
+      <div class="d-flex flex-column align-items-center col-5 rounded-4 bg-degrade">
+        <div style="background-color: red; height: 120px; width: 120px;" class="my-5">
         </div>
-        <form action="" class="d-flex flex-column col-5">
-          <input type="number" id="cnpj" name="cnpj" placeholder="CNPJ" class="my-3 fs-5">
-          <input type="text" id="nome-doador" name="nome-doador" placeholder="Nome de Usuário" class="my-3 fs-5">
-          <input type="email" id="email-doador" name="email-doador" placeholder="Email" class="my-3 fs-5">
-          <input type="password" id="senha-doador" name="senha-doador" placeholder="Senha" class="my-3 fs-5">
-          <input type="password" id="confirma-doador" name="confirma-doador" placeholder="Confirmar Senha" class="my-3 fs-5">
+        <form action="" class="d-flex flex-column col-8 align-items-center">
+          <input type="number" id="cnpj" name="cnpj" placeholder="CNPJ" class="my-3 fs-4 w-100">
+          <input type="text" id="nome-doador" name="nome-doador" placeholder="Nome de Usuário" class="my-3 fs-4 w-100">
+          <input type="email" id="email-doador" name="email-doador" placeholder="Email" class="my-3 fs-4 w-100">
+          <input type="password" id="senha-doador" name="senha-doador" placeholder="Senha" class="my-3 fs-4 w-100">
+          <input type="password" id="confirma-doador" name="confirma-doador" placeholder="Confirmar Senha" class="my-3 fs-4 w-100">
 
-          <button class="margin-top-maior fs-5 py-2">
+          <button class="border border-0 col-6 bg-primaria text-light fs-4 text-center margin-top-maior py-3 efeito-hover-button mb-5">
             Cadastrar-se
           </button>
         </form>
       </div>
       
-      <div style="background-color: green; height: 520px;" class="d-flex flex-column align-items-center col-5 align-self-center rounded-4">
-        <div style="background-color: red; height: 120px; width: 120px;" class="mt-5">
+      <div class="d-flex flex-column align-items-center col-5 align-self-center rounded-4 bg-degrade">
+        <div style="background-color: red; height: 120px; width: 120px;" class="my-5">
         </div>
-        <form action="" class="d-flex flex-column col-5">
-          <input type="text" id="login-doador" name="login-doador" placeholder="Usuário ou email" class="my-3 fs-5">
-          <input type="password" id="login-senha-doador" name="login-senha-doador" placeholder="Senha" class="my-3 fs-5">
-          <button class="margin-top-maior fs-5 py-2">
+        <form action="" class="d-flex flex-column col-8 align-items-center">
+          <input type="text" id="login-doador" name="login-doador" placeholder="Usuário ou email" class="my-3 fs-4 w-100">
+          <input type="password" id="login-senha-doador" name="login-senha-doador" placeholder="Senha" class="my-3 fs-4 w-100">
+
+          <button class="border border-0 col-6 bg-primaria text-light fs-4 text-center margin-top-maior py-3 efeito-hover-button mb-5">
             Entrar
           </button>
         </form>
       </div>
     </div>
-
-
-
-
-
-
-
-
-
-
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
     integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
