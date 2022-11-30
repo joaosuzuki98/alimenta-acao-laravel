@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <title>Title</title>
@@ -11,15 +11,23 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="/css/doador-anuncios.css">
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+      
+    {{-- Meu css --}}
+    <link rel="stylesheet" href="/css/anuncios.css">
 </head>
 
 <body>
 
     <div style="height: 120px; background-color: red; width: 350px;" class="mb-4"></div>
 
-    <div class="grid-container">
-        <div style="background: green;" class="col-4 d-flex justify-content-center">
+    <div class="d-flex justify-content-evenly py-5">
+        <div class="col-4 d-flex justify-content-center bg-quartenaria">
 
             <form action="">
                 <label for="titulo" class="text-light fs-4 mb-2 mt-4">Título</label>
@@ -32,42 +40,37 @@
                 <input type="text" id="n-pessoas" name="n-pessoas" class="w-100 mb-2 fs-5">
 
                 <label for="n-instituicoes" class="text-light fs-4">Nº de instituições para receber<label>
-                        <input type="text" id="n-instituicoes" name="n-instituicoes" class="w-100 mb-4 mt-2 fs-5">
+                <input type="text" id="n-instituicoes" name="n-instituicoes" class="w-100 mb-4 mt-2 fs-5">
 
-                        <div class="d-flex justify-content-center mb-4">
-                            <button>Enviar</button>
-                        </div>
+                <div class="d-flex justify-content-center">
+                    <button class="col-4 bg-primaria text-light fs-4 text-center mt-2 mb-5 py-3 efeito-hover-button">
+                        Enviar
+                    </button>
+                </div>
             </form>
         </div>
 
-        <div style="background: green;" class="col-4 pb-3 d-flex flex-column align-items-center">
-            <h2 class="mb-3 text-light text-center">Anúncios ativos</h2>
-            <input type="text" readonly class="fs-5 mb-3 largura" name="ativo-1">
-            <input type="text" readonly class="fs-5 mb-3 largura" name="ativo-2">
-            <input type="text" readonly class="fs-5 mb-3 largura" name="ativo-3">
-            <input type="text" readonly class="fs-5 largura" name="ativo-4">
-        </div>
-
-
-
-        <div style="background: green;" class="col-4 pb-3 d-flex flex-column align-items-center">
-            <h2 class="mb-3 text-light text-center">Histórico de anúncios</h2>
-            <input type="text" readonly class="fs-5 mb-3 largura" name="historico-1">
-            <input type="text" readonly class="fs-5 mb-3 largura" name="historico-2">
-            <input type="text" readonly class="fs-5 mb-3 largura" name="historico-3">
-            <input type="text" readonly class="fs-5 largura" name="historico-4">
+        <div class="col-4 d-flex flex-column justify-content-between">
+            <div class="col-12 pb-3 d-flex flex-column align-items-center bg-quartenaria">
+                <h2 class="mb-4 mt-3 text-light text-center">Anúncios ativos</h2>
+                <input type="text" readonly class="fs-5 mb-3 largura" name="ativo-1">
+                <input type="text" readonly class="fs-5 mb-3 largura" name="ativo-2">
+                <input type="text" readonly class="fs-5 mb-3 largura" name="ativo-3">
+                <input type="text" readonly class="fs-5 largura mb-4" name="ativo-4">
+            </div>
+    
+    
+    
+            <div class="col-12 pb-3 d-flex flex-column align-items-center bg-quartenaria">
+                <h2 class="mb-4 mt-3 text-light text-center">Histórico de anúncios</h2>
+                <input type="text" readonly class="fs-5 mb-3 largura" name="historico-1">
+                <input type="text" readonly class="fs-5 mb-3 largura" name="historico-2">
+                <input type="text" readonly class="fs-5 mb-3 largura" name="historico-3">
+                <input type="text" readonly class="fs-5 largura mb-4" name="historico-4">
+            </div>
+    
         </div>
     </div>
-
-
-
-
-
-
-
-
-
-
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
         integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
