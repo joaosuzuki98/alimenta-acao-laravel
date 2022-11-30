@@ -20,6 +20,15 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
+            $table->char('cnpj', 14)->nullable();
+            $table->char('cpf', 11)->nullable();
+            $table->string('endereco');
+            $table->string('bairro');
+            $table->string('cidade');
+            $table->string('estado');
+            $table->string('cep');
+            $table->string('complemento')->nullable();
+            $table->string('whatsapp')->nullable();
             $table->timestamps();
         });
     }

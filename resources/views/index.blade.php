@@ -66,6 +66,10 @@
                     class="fw-bold">Área do
                     usuário</span></button>
               </a>
+
+              <a href="{{ route('login') }}" class="btn btn-primary">
+                Login
+              </a>
             </div>
             </form>
         </div>
@@ -198,8 +202,8 @@
         <i class="fa-solid fa-square-xmark position-relative x-mark fa-2xl txt-quintenaria" id="fechar-modal"></i>
         <h2 class="text-light fw-bold fs-1 mb-5 mt-4">Escolha o tipo de usuário</h2>
         <div class="d-flex justify-content-evenly h-100 w-100">
-          <a id="clique-doador" href="{{ route('cadastro-doador') }}"></a>
-          <a id="clique-donatario" href="{{ route('cadastro-donatario') }}"></a>
+          <a id="clique-doador" href="{{ route('register') }}"></a>
+          <a id="clique-donatario" href="{{ route('register') }}"></a>
         </div>
       </div>
     </div>

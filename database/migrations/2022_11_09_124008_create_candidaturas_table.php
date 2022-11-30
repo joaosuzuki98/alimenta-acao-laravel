@@ -15,8 +15,10 @@ return new class extends Migration
     {
         Schema::create('candidaturas', function (Blueprint $table) {
             $table->id();
-            $table->integer('id_user');
-            $table->integer('id_anuncio');
+            $table->unsignedBigInteger('id_user');
+            $table->foreign('id_user')->references('id')->on('users');
+            $table->unsignedBigInteger('id_anuncio');
+            $table->foreign('id_anuncio')->references('id')->on('anuncios');
             $table->timestamps();
         });
     }

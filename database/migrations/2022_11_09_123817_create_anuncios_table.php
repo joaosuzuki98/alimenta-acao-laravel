@@ -15,6 +15,8 @@ return new class extends Migration
     {
         Schema::create('anuncios', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('id_user');
+            $table->foreign('id_user')->references('id')->on('users');
             $table->string('titulo');
             $table->string('descricao');
             $table->string('num_donatarios');

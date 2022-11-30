@@ -25,14 +25,30 @@ Route::get('/cadastro-donatario', function () {
     return view('cadastro-donatario');
 })->name('cadastro-donatario');
 
-Route::get('/doador-anuncios', function() {
-    return view('doador-anuncios');
-})->name('doador-anuncios');
+Route::get('/login', function () {
+    return view('auth.login');
+})->name('login');
 
-Route::get('/donatario-anuncios', function() {
-    return view('donatario-anuncios');
-})->name('donatario-anuncios');
 
-Route::get('/perfil', function() {
-    return view('perfil');
-})->name('perfil');
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified'
+])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+
+    Route::get('/doador-anuncios', function() {
+        return view('doador-anuncios');
+    })->name('doador-anuncios');
+    
+    Route::get('/donatario-anuncios', function() {
+        return view('donatario-anuncios');
+    })->name('donatario-anuncios');
+    
+    Route::get('/perfil', function() {
+        return view('perfil');
+    })->name('perfil');
+    
+});
