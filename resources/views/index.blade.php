@@ -198,8 +198,8 @@
         <i class="fa-solid fa-square-xmark position-relative x-mark fa-2xl txt-quintenaria" id="fechar-modal"></i>
         <h2 class="text-light fw-bold fs-1 mb-5 mt-4">Escolha o tipo de usuário</h2>
         <div class="d-flex justify-content-evenly h-100 w-100">
-          <div class="doador"></div>
-          <div class="donatario"></div>
+          <a id="clique-doador" href="{{ route('cadastro-doador') }}"></a>
+          <a id="clique-donatario" href="{{ route('cadastro-donatario') }}"></a>
         </div>
       </div>
     </div>

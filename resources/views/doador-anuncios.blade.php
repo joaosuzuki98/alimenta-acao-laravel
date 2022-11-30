@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="/css/anuncios.css">
 </head>
 
-<body>
+<body class="bg-quintenaria">
 
     <div style="height: 120px; background-color: red; width: 350px;" class="mb-4"></div>
 
