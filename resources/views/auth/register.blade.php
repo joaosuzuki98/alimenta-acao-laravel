@@ -10,13 +10,8 @@
             @csrf
 
             <div>
-                <x-jet-label for="name" value="{{ __('Name') }}" />
+                <x-jet-label for="name" value="{{ __('Nome') }}" />
                 <x-jet-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
-            </div>
-
-            <div class="mt-4">
-                <x-jet-label for="cnpj" value="{{ __('CNPJ') }}" />
-                <x-jet-input id="cnpj" class="block mt-1 w-full" type="number" name="cnpj" :value="old('cnpj')" required />
             </div>
 
             <div class="mt-4">
@@ -25,12 +20,52 @@
             </div>
 
             <div class="mt-4">
-                <x-jet-label for="password" value="{{ __('Password') }}" />
+                <x-jet-label for="cnpj" value="{{ __('CNPJ') }}" />
+                <x-jet-input id="cnpj" class="block mt-1 w-full" type="text" name="cnpj" :value="old('cnpj')" required />
+            </div>
+
+            <div class="mt-4">
+                <x-jet-label for="cpf" value="{{ __('CPF') }}" />
+                <x-jet-input id="cpf" class="block mt-1 w-full" type="text" name="cpf" :value="old('cpf')" required />
+            </div>
+
+            <div class="mt-4">
+                <x-jet-label for="endereco" value="{{ __('Endereço') }}" />
+                <x-jet-input id="endereco" class="block mt-1 w-full" type="text" name="endereco" :value="old('endereco')" required />
+            </div>
+
+            <div class="mt-4">
+                <x-jet-label for="bairro" value="{{ __('Bairro') }}" />
+                <x-jet-input id="bairro" class="block mt-1 w-full" type="text" name="bairro" :value="old('bairro')" required />
+            </div>
+
+            <div class="mt-4">
+                <x-jet-label for="cidade" value="{{ __('Cidade') }}" />
+                <x-jet-input id="cidade" class="block mt-1 w-full" type="text" name="cidade" :value="old('cidade')" required />
+            </div>
+
+            <div class="mt-4">
+                <x-jet-label for="estado" value="{{ __('Estado') }}" />
+                <x-jet-input id="estado" class="block mt-1 w-full" type="text" name="estado" :value="old('estado')" required />
+            </div>
+
+            <div class="mt-4">
+                <x-jet-label for="cep" value="{{ __('CEP') }}" />
+                <x-jet-input id="cep" class="block mt-1 w-full" type="text" name="cep" :value="old('cep')" required />
+            </div>
+
+            <div class="mt-4">
+                <x-jet-label for="whatsapp" value="{{ __('Whatsapp') }}" />
+                <x-jet-input id="whatsapp" class="block mt-1 w-full" type="text" name="whatsapp" :value="old('whatsapp')" required />
+            </div>
+
+            <div class="mt-4">
+                <x-jet-label for="password" value="{{ __('Senha') }}" />
                 <x-jet-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="new-password" />
             </div>
 
             <div class="mt-4">
-                <x-jet-label for="password_confirmation" value="{{ __('Confirm Password') }}" />
+                <x-jet-label for="password_confirmation" value="{{ __('Confirmar senha') }}" />
                 <x-jet-input id="password_confirmation" class="block mt-1 w-full" type="password" name="password_confirmation" required autocomplete="new-password" />
             </div>
 
@@ -53,11 +88,11 @@
 
             <div class="flex items-center justify-end mt-4">
                 <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
-                    {{ __('Already registered?') }}
+                    {{ __('Já possui uma conta?') }}
                 </a>
 
                 <x-jet-button class="ml-4">
-                    {{ __('Register') }}
+                    {{ __('Cadastrar-se') }}
                 </x-jet-button>
             </div>
         </form>
