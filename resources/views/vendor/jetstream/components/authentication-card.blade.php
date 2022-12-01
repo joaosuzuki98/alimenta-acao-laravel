@@ -1,4 +1,10 @@
-<div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100">
+<style>
+    .bg-bege {
+        background-color: #F2E3D5;
+    }
+</style>
+
+<div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-bege">
     <div>
         {{ $logo }}
     </div>

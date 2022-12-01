@@ -39,13 +39,13 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 
-    Route::get('/doador-anuncios', function() {
-        return view('doador-anuncios');
-    })->name('doador-anuncios');
+    Route::get('/anuncios', function() {
+        return view('anuncios');
+    })->name('anuncios');
     
-    Route::get('/donatario-anuncios', function() {
-        return view('donatario-anuncios');
-    })->name('donatario-anuncios');
+    // Route::get('/donatario-anuncios', function() {
+    //     return view('donatario-anuncios');
+    // })->name('donatario-anuncios');
     
     Route::get('/perfil', function() {
         return view('perfil');

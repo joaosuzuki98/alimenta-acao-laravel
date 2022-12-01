@@ -24,15 +24,16 @@ class CreateNewUser implements CreatesNewUsers
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => $this->passwordRules(),
-            'cnpj' => ['string', 'max:16'],
-            'cpf' => ['string', 'max:16'],
+            'cnpj' => ['nullable', 'string', 'max:16'],
+            'cpf' => ['nullable', 'string', 'max:16'],
             'endereco' => ['required', 'string', 'max:255'],
             'bairro' => ['required', 'string', 'max:255'],
             'cidade' => ['required', 'string', 'max:255'],
             'estado' => ['required', 'string', 'max:3'],
             'cep' => ['required', 'string', 'max:10'],
-            'complemento' => ['string', 'max:255'],
-            'whatsapp' => ['string', 'max:255'],
+            'complemento' => ['nullable', 'string', 'max:255'],
+            'whatsapp' => ['nullable', 'string', 'max:255'],
+            'tipo' => ['required', 'string', 'max:10'],
             'terms' => Jetstream::hasTermsAndPrivacyPolicyFeature() ? ['accepted', 'required'] : '',
         ])->validate();
 
@@ -49,6 +50,7 @@ class CreateNewUser implements CreatesNewUsers
             'cep' => $input['cep'],
             'complemento' => $input['complemento'],
             'whatsapp' => $input['whatsapp'],
+            'tipo' => $input['tipo'],
 
         ]);
     }

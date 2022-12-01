@@ -21,12 +21,12 @@
 
             <div class="mt-4">
                 <x-jet-label for="cnpj" value="{{ __('CNPJ') }}" />
-                <x-jet-input id="cnpj" class="block mt-1 w-full" type="text" name="cnpj" :value="old('cnpj')" required />
+                <x-jet-input id="cnpj" class="block mt-1 w-full" type="text" name="cnpj" :value="old('cnpj')" />
             </div>
 
             <div class="mt-4">
                 <x-jet-label for="cpf" value="{{ __('CPF') }}" />
-                <x-jet-input id="cpf" class="block mt-1 w-full" type="text" name="cpf" :value="old('cpf')" required />
+                <x-jet-input id="cpf" class="block mt-1 w-full" type="text" name="cpf" :value="old('cpf')" />
             </div>
 
             <div class="mt-4">
@@ -55,8 +55,19 @@
             </div>
 
             <div class="mt-4">
+                <x-jet-label for="complemento" value="{{ __('Complemento') }}" />
+                <x-jet-input id="complemento" class="block mt-1 w-full" type="text" name="complemento" :value="old('complemento')" />
+            </div>
+
+            <div class="mt-4">
                 <x-jet-label for="whatsapp" value="{{ __('Whatsapp') }}" />
-                <x-jet-input id="whatsapp" class="block mt-1 w-full" type="text" name="whatsapp" :value="old('whatsapp')" required />
+                <x-jet-input id="whatsapp" class="block mt-1 w-full" type="text" name="whatsapp" :value="old('whatsapp')"  />
+            </div>
+
+            <div class="mt-4">
+                <x-jet-label for="tipo" value="{{ __('Tipo de usuário') }}" />
+                <x-jet-input id="tipo1" class="mt-1" type="radio" name="tipo" value="doador" required /> Doador &nbsp;
+                <x-jet-input id="tipo2" class="mt-1" type="radio" name="tipo" value="donatario" required /> Donatário
             </div>
 
             <div class="mt-4">
