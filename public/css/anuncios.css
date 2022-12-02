@@ -102,3 +102,7 @@ input, label{
 .altura-vh {
     height: 80vh;
 }
+
+.pointer-ms {
+    cursor: pointer;
+}

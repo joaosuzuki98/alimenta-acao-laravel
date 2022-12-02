@@ -27,7 +27,7 @@
 
 </style>
 
-<button {{ $attributes->merge(['type' => 'submit', 'class' => 'bg-novo col-4 text-light fs-5 text-center py-2 efeito-hover-button']) }}>
+<button {{ $attributes->merge(['type' => 'submit', 'class' => 'bg-novo col-4 text-light text-lg text-center py-2 efeito-hover-button']) }}>
     {{ $slot }}
 </button>
 

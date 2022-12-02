@@ -30,21 +30,29 @@
         <div class="d-flex justify-content-evenly py-5">
             <div class="col-4 d-flex justify-content-center bg-quartenaria">
 
-                <form action="">
+                <form action="{{ route('salva_anuncio') }}" method="POST" enctype="multipart/form-data">
+                @csrf
                     <label for="titulo" class="text-light fs-4 mb-2 mt-4">Título</label>
-                    <input type="text" id="titulo" name="titulo" class="w-100 mb-2 fs-5">
+                    <input type="text" id="titulo" name="titulo" class="w-100 mb-2 fs-5" maxlength="120">
 
                     <label for="descricao" class="text-light fs-4 mb-2">Descrição</label>
-                    <textarea name="descricao" id="descricao" cols="60" rows="10" class="mb-2"></textarea>
+                    <textarea name="descricao" id="descricao" cols="60" rows="10" class="mb-2" maxlength="500"></textarea>
 
                     <label for="n-pessoas" class="text-light fs-4 mb-2">Nº de pessoas para receber</label>
-                    <input type="text" id="n-pessoas" name="n-pessoas" class="w-100 mb-2 fs-5">
+                    <input type="number" id="n-pessoas" name="num_donatarios" class="w-100 mb-2 fs-5" min="0" max="20">
 
                     <label for="n-instituicoes" class="text-light fs-4">Nº de instituições para receber<label>
-                    <input type="text" id="n-instituicoes" name="n-instituicoes" class="w-100 mb-4 mt-2 fs-5">
+                    <input type="number" id="n-instituicoes" name="num_donatarios_instituicoes" class="w-100 mb-4 mt-2 fs-5" min="0" max="5">
+
+                    <div class="mb-3">
+                      <label for="foto" class="form-label">
+                        Selecione uma foto
+                      </label>
+                      <input type="file" class="form-control" name="foto" id="foto">
+                    </div>
 
                     <div class="d-flex justify-content-center">
-                        <button class="col-4 bg-primaria text-light fs-4 text-center mt-2 mb-5 py-3 efeito-hover-button">
+                        <button class="col-4 bg-primaria text-light fs-4 text-center mt-2 mb-5 py-3 efeito-hover-button" type="submit">
                             Enviar
                         </button>
                     </div>
@@ -54,10 +62,10 @@
             <div class="col-4 d-flex flex-column justify-content-between">
                 <div class="col-12 pb-3 d-flex flex-column align-items-center bg-quartenaria">
                     <h2 class="mb-4 mt-3 text-light text-center">Anúncios ativos</h2>
-                    <input type="text" readonly class="fs-5 mb-3 largura" name="ativo-1">
-                    <input type="text" readonly class="fs-5 mb-3 largura" name="ativo-2">
-                    <input type="text" readonly class="fs-5 mb-3 largura" name="ativo-3">
-                    <input type="text" readonly class="fs-5 largura mb-4" name="ativo-4">
+                    <input type="text" readonly class="fs-5 mb-3 largura pointer-ms" name="ativo-1">
+                    <input type="text" readonly class="fs-5 mb-3 largura pointer-ms" name="ativo-2">
+                    <input type="text" readonly class="fs-5 mb-3 largura pointer-ms" name="ativo-3">
+                    <input type="text" readonly class="fs-5 largura mb-4 pointer-ms" name="ativo-4">
                 </div>
         
         

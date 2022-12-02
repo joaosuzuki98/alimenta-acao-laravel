@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Anuncios_controller;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -42,13 +43,10 @@ Route::middleware([
     Route::get('/anuncios', function() {
         return view('anuncios');
     })->name('anuncios');
-    
-    // Route::get('/donatario-anuncios', function() {
-    //     return view('donatario-anuncios');
-    // })->name('donatario-anuncios');
-    
+        
     Route::get('/perfil', function() {
         return view('perfil');
     })->name('perfil');
-    
+
+    Route::post('/salva_anuncio', [Anuncios_controller::class, 'gravar'])->name('salva_anuncio');
 });
