@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('cnpj')->nullable();
             $table->string('cpf')->nullable();
             $table->string('endereco');
+            $table->string('numero');
             $table->string('bairro');
             $table->string('cidade');
             $table->string('estado');

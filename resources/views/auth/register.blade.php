@@ -50,6 +50,11 @@
             </div>
 
             <div class="mt-4">
+                <x-jet-label for="numero" value="{{ __('Número') }}" class="text-white text-lg" />
+                <x-jet-input id="numero" class="block mt-1 w-full" type="text" name="numero" :value="old('numero')" />
+            </div>
+
+            <div class="mt-4">
                 <x-jet-label for="cep" value="{{ __('CEP') }}" class="text-white text-lg" />
                 <x-jet-input id="cep" class="block mt-1 w-full" type="text" name="cep" :value="old('cep')" required />
             </div>
