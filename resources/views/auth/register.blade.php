@@ -69,7 +69,7 @@
                 <x-jet-input id="whatsapp" class="block mt-1 w-full" type="text" name="whatsapp" :value="old('whatsapp')"  />
             </div>
 
-            <div class="mt-4 text-white">
+            <div class="mt-4 text-white hidden">
                 <x-jet-label for="tipo" value="{{ __('Tipo de usuário') }}" class="text-white" />
                 <x-jet-input id="tipo1" class="mt-1" type="radio" name="tipo" value="doador" required /> Doador &nbsp;
                 <x-jet-input id="tipo2" class="mt-1" type="radio" name="tipo" value="donatario" required /> Donatário
