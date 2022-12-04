@@ -69,12 +69,6 @@
                 <x-jet-input id="whatsapp" class="block mt-1 w-full" type="text" name="whatsapp" :value="old('whatsapp')"  />
             </div>
 
-            <div class="mt-4 text-white hidden">
-                <x-jet-label for="tipo" value="{{ __('Tipo de usuário') }}" class="text-white" />
-                <x-jet-input id="tipo1" class="mt-1" type="radio" name="tipo" value="doador" required /> Doador &nbsp;
-                <x-jet-input id="tipo2" class="mt-1" type="radio" name="tipo" value="donatario" required /> Donatário
-            </div>
-
             <div class="mt-4">
                 <x-jet-label for="password" value="{{ __('Senha') }}" class="text-white text-lg" />
                 <x-jet-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="new-password" />

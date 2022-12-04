@@ -170,6 +170,13 @@ a:hover {
     font-size: 2.8rem;
 }
 
+.escolha-usuario {
+    height: 90%;
+    width: 35%;
+    background-color: white;
+}
+
+
 #fechar-modal {
     cursor: pointer;
 }
@@ -177,20 +184,6 @@ a:hover {
 #img-main {
     margin-top: -300px;
     margin-left: -300px;
-}
-
-#clique-doador {
-    display: block;
-    height: 90%;
-    width: 35%;
-    background-color: white;
-}
-
-#clique-donatario {
-    display: block;
-    height: 90%;
-    width: 35%;
-    background-color: white;
 }
 
 /* Botão de login/cadastro */
