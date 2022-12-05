@@ -61,13 +61,13 @@
               <button type="button" class="btn btn-primary my-2 my-sm-0 p-3 d-block d-sm-none"> <span
                   class="text-center me-2"><i class="fa-solid fa-user"></i></span>
                 Área do usuário</button>
-              <a href="#escolha-usuario">
+              {{-- <a href="#escolha-usuario">
                 <button class="custom-btn btn-12 d-none d-sm-block ativa-modal"><span class="fw-bold">Entrar/cadastrar</span><span
                     class="fw-bold">Área do
                     usuário</span></button>
-              </a>
+              </a> --}}
 
-              <a href="{{ route('login') }}" class="btn btn-primary">
+              <a href="{{ route('login') }}" class="btn text-light bg-terciaria text-center">
                 Login
               </a>
             </div>
