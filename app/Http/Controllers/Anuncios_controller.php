@@ -22,4 +22,18 @@ class Anuncios_controller extends Controller
 
         return redirect('anuncios');
     }
+
+    public function get_anuncios_by_user() {
+        $id_user = auth()->user()->id;
+        // Carrega registros onde o tipo é igual a receita e user_id é igual a variável $user_id
+        $anuncios_ativos = Anuncio::where('id_user', $id_user)->where('concluido', 0)->get();
+        $anuncios_desativados = Anuncio::where('id_user', $id_user)->where('concluido', 1)->get();
+
+        //Carrega a VIEW extrato enviando as variáveis $despesas e $receitas
+        return view('anuncios', [
+            'anuncios_ativos' => $anuncios_ativos,
+            'anuncios_desativados' => $anuncios_desativados, 
+        ]);
+    }
+
 }

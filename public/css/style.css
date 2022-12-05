@@ -83,20 +83,20 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-a {
+li a {
     transition: color 400ms !important;
 }
 
-a:hover {
+li a:hover {
     color: var(--cor-quartenaria) !important;
 }
 
 .efeito-hover-button {
-    transition: background-color 400ms;
+    transition: background-color 400ms !important;
 }
 
 .efeito-hover-button:hover {
-    background-color: var(--cor-terciaria);
+    background-color: var(--cor-terciaria) !important;
 }
 
 .logo {

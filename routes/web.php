@@ -40,13 +40,14 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 
-    Route::get('/anuncios', function() {
-        return view('anuncios');
-    })->name('anuncios');
+    // Route::get('/anuncios', function() {
+    //     return view('anuncios');
+    // })->name('anuncios');
         
     Route::get('/perfil', function() {
         return view('perfil');
     })->name('perfil');
 
     Route::post('/salva_anuncio', [Anuncios_controller::class, 'gravar'])->name('salva_anuncio');
+    Route::get('/anuncios', [Anuncios_controller::class, 'get_anuncios_by_user'])->name('anuncios');
 });

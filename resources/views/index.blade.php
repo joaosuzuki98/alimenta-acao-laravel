@@ -55,7 +55,7 @@
               <a class="nav-link text-light" href="#receba">Receba</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light" href="#sobre">Sobre</a>
+              <a class="nav-link text-light me-2" href="#sobre">Sobre</a>
             </li>
             <div class="d-flex my-2 my-lg-0">
               <button type="button" class="btn btn-primary my-2 my-sm-0 p-3 d-block d-sm-none"> <span
@@ -66,12 +66,14 @@
                     class="fw-bold">Área do
                     usuário</span></button>
               </a> --}}
+              <a href="{{ route('register') }}" class="btn text-light bg-quartenaria text-center me-3 py-2 efeito-hover-button">
+                Cadastrar-se
+              </a>
 
-              <a href="{{ route('login') }}" class="btn text-light bg-terciaria text-center">
+              <a href="{{ route('login') }}" class="btn text-light bg-quartenaria text-center py-2 efeito-hover-button">
                 Login
               </a>
             </div>
-            </form>
         </div>
       </div>
     </nav>
