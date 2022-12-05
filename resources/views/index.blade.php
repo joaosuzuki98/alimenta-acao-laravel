@@ -202,17 +202,8 @@
         <i class="fa-solid fa-square-xmark position-relative x-mark fa-2xl txt-quintenaria" id="fechar-modal"></i>
         <h2 class="text-light fw-bold fs-1 mb-5 mt-4">Escolha o tipo de usuário</h2>
         <div class="d-flex justify-content-evenly h-100 w-100">
-          <form action="{{ route('salva_tipo') }}" method="POST" class="escolha-usuario" >
-          @csrf
 
-            <div class="text-white invisible w-0 h-0">
-              <x-jet-label for="tipo" value="{{ __('Tipo de usuário') }}" class="text-white" />
-              <x-jet-input id="tipo1" type="radio" name="tipo" value="doador" required checked /> Doador &nbsp;
-              <x-jet-input id="tipo2" type="radio" name="tipo" value="donatario" required /> Donatário
-            </div>
-
-            <button type="submit" class="w-100 h-100 border-0 mt-0"></button>
-          </form>
+          <a class="escolha-usuario" href="{{ route('register') }}"></a>
           <a class="escolha-usuario" href="{{ route('register') }}"></a>
         </div>
       </div>

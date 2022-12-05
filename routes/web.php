@@ -49,6 +49,4 @@ Route::middleware([
     })->name('perfil');
 
     Route::post('/salva_anuncio', [Anuncios_controller::class, 'gravar'])->name('salva_anuncio');
-
-    Route::post('/salva_tipo', [TipoUsuario_controller::class, 'gravar'])->name('salva_tipo');
 });

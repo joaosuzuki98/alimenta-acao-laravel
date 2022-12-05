@@ -30,6 +30,11 @@
             </div>
 
             <div class="mt-4">
+                <x-jet-label for="cep" value="{{ __('CEP') }}" class="text-white text-lg" />
+                <x-jet-input id="cep" class="block mt-1 w-full" type="text" name="cep" :value="old('cep')" required />
+            </div>
+
+            <div class="mt-4">
                 <x-jet-label for="endereco" value="{{ __('Endereço') }}" class="text-white text-lg" />
                 <x-jet-input id="endereco" class="block mt-1 w-full" type="text" name="endereco" :value="old('endereco')" required />
             </div>
@@ -55,11 +60,6 @@
             </div>
 
             <div class="mt-4">
-                <x-jet-label for="cep" value="{{ __('CEP') }}" class="text-white text-lg" />
-                <x-jet-input id="cep" class="block mt-1 w-full" type="text" name="cep" :value="old('cep')" required />
-            </div>
-
-            <div class="mt-4">
                 <x-jet-label for="complemento" value="{{ __('Complemento') }}" class="text-white text-lg" />
                 <x-jet-input id="complemento" class="block mt-1 w-full" type="text" name="complemento" :value="old('complemento')" />
             </div>
@@ -69,6 +69,12 @@
                 <x-jet-input id="whatsapp" class="block mt-1 w-full" type="text" name="whatsapp" :value="old('whatsapp')"  />
             </div>
 
+            <div class="text-white mt-4">
+                <x-jet-label for="tipo" value="{{ __('Tipo de usuário') }}" class="text-white text-lg" />
+                <x-jet-input id="tipo1" type="radio" name="tipo" value="doador" required /> Doador &nbsp;
+                <x-jet-input id="tipo2" type="radio" name="tipo" value="donatario" required /> Donatário
+            </div>  
+            
             <div class="mt-4">
                 <x-jet-label for="password" value="{{ __('Senha') }}" class="text-white text-lg" />
                 <x-jet-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="new-password" />
