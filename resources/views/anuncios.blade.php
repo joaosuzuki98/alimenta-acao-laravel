@@ -17,6 +17,9 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />    
       
     {{-- Meu css --}}
     <link rel="stylesheet" href="/css/anuncios.css">
@@ -30,49 +33,107 @@
         <div class="d-flex justify-content-evenly py-5">
             <div class="col-4 d-flex justify-content-center bg-quartenaria">
 
-                <form action="{{ route('salva_anuncio') }}" method="POST" enctype="multipart/form-data">
-                @csrf
-                    <label for="titulo" class="text-light fs-4 mb-2 mt-4">Título</label>
-                    <input type="text" id="titulo" name="titulo" class="w-100 mb-2 fs-5" maxlength="120">
+                @if(isset($anuncio_edicao))
+                <form action="{{ route('atualiza') }}" method="POST" enctype="multipart/form-data">
+                    @csrf
+                    @method('PUT')
 
-                    <label for="descricao" class="text-light fs-4 mb-2">Descrição</label>
-                    <textarea name="descricao" id="descricao" cols="60" rows="10" class="mb-2" maxlength="500"></textarea>
+                        <input type="hidden" name="id" value="{{ $anuncio_edicao->id }}">
 
-                    <label for="n-pessoas" class="text-light fs-4 mb-2">Nº de pessoas para receber</label>
-                    <input type="number" id="n-pessoas" name="num_donatarios" class="w-100 mb-2 fs-5" min="0" max="20">
+                        <label for="titulo" class="text-light fs-4 mb-2 mt-4">Título</label>
+                        <input type="text" id="titulo" name="titulo" class="w-100 mb-2 fs-5" maxlength="120" value="{{ $anuncio_edicao->titulo }}">
 
-                    <label for="n-instituicoes" class="text-light fs-4">Nº de instituições para receber<label>
-                    <input type="number" id="n-instituicoes" name="num_donatarios_instituicoes" class="w-100 mb-4 mt-2 fs-5" min="0" max="5">
+                        <label for="descricao" class="text-light fs-4 mb-2">Descrição</label>
+                        <textarea name="descricao" id="descricao" cols="60" rows="10" class="mb-2" maxlength="500">
+                            {{ $anuncio_edicao->descricao }}
+                        </textarea>
 
-                    <label for="foto" class="form-label">
-                    Selecione uma foto
-                    </label>
-                    <input type="file" class="form-control mb-3" name="foto" id="foto">
+                        <label for="n-pessoas" class="text-light fs-4 mb-2">Nº de pessoas para receber</label>
+                        <input type="number" id="n-pessoas" name="num_donatarios" class="w-100 mb-2 fs-5" min="0" max="20" value="{{ $anuncio_edicao->num_donatarios }}">
 
-                    <div class="d-flex justify-content-center">
-                        <button class="col-4 bg-primaria text-light fs-4 text-center mt-2 mb-5 py-3 efeito-hover-button border-0" type="submit">
-                            Enviar
-                        </button>
-                    </div>
-                </form>
+                        <label for="n-instituicoes" class="text-light fs-4">Nº de instituições para receber<label>
+                        <input type="number" id="n-instituicoes" name="num_donatarios_instituicoes" class="w-100 mb-4 mt-2 fs-5" min="0" max="5" value="{{ $anuncio_edicao->num_donatarios_instituicoes }}">
+
+                        <label for="foto" class="form-label">
+                        Selecione uma foto
+                        </label>
+                        <input type="file" class="form-control mb-3" name="foto" id="foto" value="{{ $anuncio_edicao->foto }}">
+
+                        <div class="d-flex justify-content-center">
+                            <button class="col-4 bg-primaria text-light fs-4 text-center mt-2 mb-5 py-3 efeito-hover-button border-0" type="submit">
+                                Atualizar
+                            </button>
+                        </div>
+                    </form>
+                @else
+                    <form action="{{ route('salva_anuncio') }}" method="POST" enctype="multipart/form-data">
+                    @csrf
+                        <label for="titulo" class="text-light fs-4 mb-2 mt-4">Título</label>
+                        <input type="text" id="titulo" name="titulo" class="w-100 mb-2 fs-5" maxlength="120">
+
+                        <label for="descricao" class="text-light fs-4 mb-2">Descrição</label>
+                        <textarea name="descricao" id="descricao" cols="60" rows="10" class="mb-2" maxlength="500"></textarea>
+
+                        <label for="n-pessoas" class="text-light fs-4 mb-2">Nº de pessoas para receber</label>
+                        <input type="number" id="n-pessoas" name="num_donatarios" class="w-100 mb-2 fs-5" min="0" max="20">
+
+                        <label for="n-instituicoes" class="text-light fs-4">Nº de instituições para receber<label>
+                        <input type="number" id="n-instituicoes" name="num_donatarios_instituicoes" class="w-100 mb-4 mt-2 fs-5" min="0" max="5">
+
+                        <label for="foto" class="form-label">
+                        Selecione uma foto
+                        </label>
+                        <input type="file" class="form-control mb-3" name="foto" id="foto">
+
+                        <div class="d-flex justify-content-center">
+                            <button class="col-4 bg-primaria text-light fs-4 text-center mt-2 mb-5 py-3 efeito-hover-button border-0" type="submit">
+                                Enviar
+                            </button>
+                        </div>
+                    </form>
+                @endif
             </div>
 
             <div class="col-4 d-flex flex-column justify-content-between">
                 <div class="col-12 pb-3 d-flex flex-column align-items-center bg-quartenaria">
                     <h2 class="mb-4 mt-3 text-light text-center">Anúncios ativos</h2>
-                    @if(count($anuncios_ativos) == 0)
-                        <p>Não há anúncios cadastrados no momento</p>
-                    @else
-                        @foreach($anuncios_ativos as $anuncio_ativo)
-                            <div class="card" style="width: 18rem;">
-                                <img src="..." class="card-img-top" alt="...">
-                                <div class="card-body">
-                                <p>{{ $anuncio_ativo->titulo }}</p>
-                                <p>{{ $anuncio_ativo->descricao }}</p>
-                                </div>
-                          </div>
-                        @endforeach
-                    @endif
+                    <div class="d-flex justify-content-center align-items">
+                        @if(count($anuncios_ativos) == 0)
+                            <p>Não há anúncios cadastrados no momento</p>
+                        @else
+                            @foreach($anuncios_ativos as $anuncio_ativo)
+                                <div class="card" style="width: 18rem;">
+                                    <img src="..." class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                    <p class="fw-bold fs-5">{{ $anuncio_ativo->titulo }}</p>
+                                    <p class="mb-2 fw-light">{{ $anuncio_ativo->descricao }}</p>
+                                    
+                                    <form method="POST" action="{{ route('deletar', [$anuncio_ativo->id]) }}" class="bg-white">
+                                        @csrf
+                                        @method('DELETE')
+
+                                        <button type="submit" class="border-0 bg-white">
+                                            <i class="fa-solid fa-trash-can fa-lg"></i>
+                                        </button>
+                                    </form>
+
+                                    <a href="{{ route('editar', [$anuncio_ativo->id]) }}">
+                                        <i class="fa-solid fa-pen-to-square fa-lg"></i>
+                                    </a>
+
+                                    <form method="POST" action="{{ route('atualiza_concluido' }}" class="bg-white">
+                                        @csrf
+                                        @method('PUT')
+
+                                        <button type="submit" class="border-0 bg-white">
+                                            <i class="fa-solid fa-square-check fa-lg"></i>
+                                        </button>
+                                    </form>
+                                    </div>
+                            </div>
+                            @endforeach
+                        @endif
+                    </div>
                 </div>
         
         

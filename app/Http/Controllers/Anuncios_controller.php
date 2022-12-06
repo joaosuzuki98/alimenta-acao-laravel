@@ -36,4 +36,40 @@ class Anuncios_controller extends Controller
         ]);
     }
 
+    public function deletar($id) {
+        Anuncio::findOrFail($id)->delete();
+
+        return redirect('anuncios');
+    }
+
+    public function get_anuncio($id) {
+        $anuncio_edicao = Anuncio::findOrFail($id);
+
+        $id_user = auth()->user()->id;
+        // Carrega registros onde o tipo é igual a receita e user_id é igual a variável $user_id
+        $anuncios_ativos = Anuncio::where('id_user', $id_user)->where('concluido', 0)->get();
+        $anuncios_desativados = Anuncio::where('id_user', $id_user)->where('concluido', 1)->get();
+
+        //Carrega a VIEW extrato enviando as variáveis $despesas e $receitas
+        $parametros =  [
+            'anuncios_ativos' => $anuncios_ativos,
+            'anuncios_desativados' => $anuncios_desativados, 
+            'anuncio_edicao' => $anuncio_edicao
+        ];
+
+
+        return view('anuncios', $parametros);
+    }
+
+    public function atualizar(Request $request) {
+        Anuncio::findOrFail($request->id)->update($request->all());
+
+        return redirect('anuncios');
+    }
+
+    public function atualizar_concluido(Request $request) {
+        Anuncio::findOrFail($request->id)->update($request->concluido());
+
+        return redirect('anuncios');
+    }
 }

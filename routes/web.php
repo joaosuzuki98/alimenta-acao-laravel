@@ -39,10 +39,6 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
-
-    // Route::get('/anuncios', function() {
-    //     return view('anuncios');
-    // })->name('anuncios');
         
     Route::get('/perfil', function() {
         return view('perfil');
@@ -51,4 +47,11 @@ Route::middleware([
     Route::post('/salva_anuncio', [Anuncios_controller::class, 'gravar'])->name('salva_anuncio');
 
     Route::get('/anuncios', [Anuncios_controller::class, 'get_anuncios_by_user'])->name('anuncios');
+
+    Route::delete('/deletar/{id}', [Anuncios_controller::class, 'deletar'])->name('deletar');
+
+    Route::get('/editar/{id}', [Anuncios_controller::class, 'get_anuncio'])->name('editar');
+    Route::put('/atualiza', [Anuncios_controller::class, 'atualizar'])->name('atualiza');
+
+    Route::put('/atualiza_concluido', [Anuncios_controller::class, 'atualizar_concluido'])->name('atualiza_concluido');
 });
