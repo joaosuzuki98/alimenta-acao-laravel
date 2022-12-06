@@ -21,17 +21,15 @@
         height: 60px;
         width: 60px;
         border-radius: 50%;
-        background-color: white;
-
+        background-color: #026773;
+        text-decoration: none;
     }
 </style>
 
 <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-bege">
-    <div class="seta-container">
-        <a href="{{ route('/') }}">
-            <i class="fa-solid fa-arrow-left-long fa-2xl"></i>
-        </a>
-    </div>
+    <a href="{{ route('/') }}" class="text-white seta-container">
+        <i class="fa-solid fa-arrow-left-long fa-2xl"></i>
+    </a>
 
     <div>
         {{ $logo }}

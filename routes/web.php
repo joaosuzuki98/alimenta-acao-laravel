@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('index');
-});
+})->name('/');
 
 Route::get('/cadastro-doador', function () {
     return view('cadastro-doador');
@@ -49,5 +49,6 @@ Route::middleware([
     })->name('perfil');
 
     Route::post('/salva_anuncio', [Anuncios_controller::class, 'gravar'])->name('salva_anuncio');
+
     Route::get('/anuncios', [Anuncios_controller::class, 'get_anuncios_by_user'])->name('anuncios');
 });
