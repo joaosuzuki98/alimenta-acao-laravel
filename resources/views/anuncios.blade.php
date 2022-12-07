@@ -28,7 +28,12 @@
 <body class="bg-quintenaria">
 
     @if(auth()->user()->tipo == 'doador')
-        <div style="height: 120px; background-color: red; width: 350px;" class="mb-4"></div>
+        <div style="height: 120px; background-color: red; width: 350px;" class="mb-4">
+            <form action="{{ route('logout') }}" method="POST">
+                @csrf
+                <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault(); this.closest('form').submit();"><strong>SAIR</strong></a>
+            </form>
+        </div>
 
         <div class="d-flex justify-content-evenly py-5">
             <div class="col-4 d-flex justify-content-center bg-quartenaria">
@@ -121,15 +126,21 @@
                                         <i class="fa-solid fa-pen-to-square fa-lg"></i>
                                     </a>
 
-                                    <form method="POST" action="{{ route('atualiza_concluido' }}" class="bg-white">
+                                    <form method="POST" action="{{ route('atualiza_concluido') }}" class="bg-white">
                                         @csrf
                                         @method('PUT')
 
+                                        <input type="hidden" name="id" value="{{ $anuncio_ativo->id }}">
+
                                         <button type="submit" class="border-0 bg-white">
-                                            <i class="fa-solid fa-square-check fa-lg"></i>
+                                            @if($anuncio_ativo->concluido == 1)
+                                                <i class="fa-solid fa-square-check fa-lg"></i>
+                                            @else
+                                                <i class="fa-regular fa-square"></i>
+                                            @endif
                                         </button>
                                     </form>
-                                    </div>
+                                </div>
                             </div>
                             @endforeach
                         @endif
@@ -158,7 +169,12 @@
             </div>
         </div>
     @else
-        <div style="height: 120px; background-color: red; width: 350px;" class="mb-4"></div>
+        <div style="height: 120px; background-color: red; width: 350px;" class="mb-4">
+            <form action="{{ route('logout') }}" method="POST">
+                @csrf
+                <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault(); this.closest('form').submit();"><strong>SAIR</strong></a>
+            </form>
+        </div>
 
         <div class="d-flex justify-content-evenly py-5 altura-vh">
             <div class="col-4 d-flex justify-content-center bg-quartenaria">
@@ -177,20 +193,66 @@
             <div class="col-4 d-flex flex-column justify-content-between">
                 <div class="col-12 pb-3 d-flex flex-column align-items-center bg-quartenaria">
                     <h2 class="mb-4 mt-3 text-light text-center">Perto de você</h2>
-                    <input type="text" readonly class="fs-5 mb-3 largura" name="ativo-1">
-                    <input type="text" readonly class="fs-5 mb-3 largura" name="ativo-2">
-                    <input type="text" readonly class="fs-5 mb-3 largura" name="ativo-3">
-                    <input type="text" readonly class="fs-5 largura mb-4" name="ativo-4">
-                </div>
+                    @if(count($anuncios_ativos) == 0)
+                    <p>Não há anúncios cadastrados no momento</p>
+                @else
+                    @foreach($anuncios_ativos as $anuncio_ativo)
+                        <div class="card" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <p class="fw-bold fs-5">{{ $anuncio_ativo->titulo }}</p>
+                            <p class="mb-2 fw-light">{{ $anuncio_ativo->descricao }}</p>
+                            
+                            <form method="POST" action="{{ route('deletar', [$anuncio_ativo->id]) }}" class="bg-white">
+                                @csrf
+                                @method('DELETE')
+
+                                <button type="submit" class="border-0 bg-white">
+                                    <i class="fa-solid fa-trash-can fa-lg"></i>
+                                </button>
+                            </form>
+
+                            <a href="{{ route('editar', [$anuncio_ativo->id]) }}">
+                                <i class="fa-solid fa-pen-to-square fa-lg"></i>
+                            </a>
+
+                            <form method="POST" action="{{ route('atualiza_concluido') }}" class="bg-white">
+                                @csrf
+                                @method('PUT')
+
+                                <input type="hidden" name="id" value="{{ $anuncio_ativo->id }}">
+
+                                <button type="submit" class="border-0 bg-white">
+                                    @if($anuncio_ativo->concluido == 1)
+                                        <i class="fa-solid fa-square-check fa-lg"></i>
+                                    @else
+                                        <i class="fa-regular fa-square"></i>
+                                    @endif
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                    @endforeach
+                @endif
+            </div>
         
         
         
                 <div class="col-12 pb-3 d-flex flex-column align-items-center bg-quartenaria">
                     <h2 class="mb-4 mt-3 text-light text-center">Histórico de participações</h2>
-                    <input type="text" readonly class="fs-5 mb-3 largura" name="historico-1">
-                    <input type="text" readonly class="fs-5 mb-3 largura" name="historico-2">
-                    <input type="text" readonly class="fs-5 mb-3 largura" name="historico-3">
-                    <input type="text" readonly class="fs-5 largura mb-4" name="historico-4">
+                    @if(count($anuncios_desativados) == 0)
+                        <p>Não há histórico de anúncios no momento</p>
+                    @else
+                        @foreach($anuncios_desativados as $anuncio_desativado)
+                            <div class="card" style="width: 18rem;">
+                                <img src="..." class="card-img-top" alt="...">
+                                <div class="card-body">
+                                <p>{{ $anuncio_desativado->titulo }}</p>
+                                <p>{{ $anuncio_desativado->descricao }}</p>
+                                </div>
+                          </div>
+                        @endforeach
+                    @endif
                 </div>
         
             </div>

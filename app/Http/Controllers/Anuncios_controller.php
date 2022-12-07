@@ -68,7 +68,8 @@ class Anuncios_controller extends Controller
     }
 
     public function atualizar_concluido(Request $request) {
-        Anuncio::findOrFail($request->id)->update($request->concluido());
+        // Anuncio::findOrFail($request->id)->update($request->concluido);
+        Anuncio::where('id', $request->id)->update(array('concluido' => 1));
 
         return redirect('anuncios');
     }
