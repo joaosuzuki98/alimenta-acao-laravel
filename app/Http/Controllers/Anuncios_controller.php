@@ -15,6 +15,7 @@ class Anuncios_controller extends Controller
         $anuncio->descricao = $request->descricao;
         $anuncio->num_donatarios = $request->num_donatarios;
         $anuncio->num_donatarios_instituicoes = $request->num_donatarios_instituicoes;
+        $anuncio->estado = auth()->user()->estado;
         $anuncio->concluido = 0;
         $anuncio->foto = $request->foto;
 
@@ -26,8 +27,12 @@ class Anuncios_controller extends Controller
     public function get_anuncios_by_user() {
         $id_user = auth()->user()->id;
         // Carrega registros onde o tipo é igual a receita e user_id é igual a variável $user_id
-        $anuncios_ativos = Anuncio::where('id_user', $id_user)->where('concluido', 0)->get();
-        $anuncios_desativados = Anuncio::where('id_user', $id_user)->where('concluido', 1)->get();
+        // $anuncios_ativos = Anuncio::where('id_user', $id_user)->where('concluido', 0)->get();
+        // $anuncios_desativados = Anuncio::where('id_user', $id_user)->where('concluido', 1)->get();
+
+        $anuncios_ativos = Anuncio::where('concluido', 0)->get();
+        $anuncios_desativados = Anuncio::where('concluido', 1)->get();
+
 
         //Carrega a VIEW extrato enviando as variáveis $despesas e $receitas
         return view('anuncios', [

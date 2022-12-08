@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('num_donatarios');
             $table->string('num_donatarios_instituicoes');
             $table->boolean('concluido');
+            $table->string('estado');
             $table->string('foto')->nullable();
             $table->timestamps();
         });
